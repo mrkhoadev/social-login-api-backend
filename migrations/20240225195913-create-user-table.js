@@ -22,11 +22,11 @@ module.exports = {
         type: Sequelize.STRING(255),
         allowNull: true,
       },
-      status: {
-        type: Sequelize.BOOLEAN,
-        defaultValue: false,
-        allowNull: false,
-      },
+      // status: {
+      //   type: Sequelize.BOOLEAN,
+      //   defaultValue: false,
+      //   allowNull: false,
+      // },
       created_at: {
         type: Sequelize.DATE,
         defaultValue: Sequelize.NOW,
