@@ -77,7 +77,7 @@ module.exports = {
                 }
                 if (!createProvider) {
                     const userUpdate = await Provider.update({
-                        updated_at: new Date()
+                        updated_at: new Date().getTime()
                     },{
                         where: { 
                             [Op.and]: [
