@@ -67,7 +67,6 @@ module.exports = {
                         [Op.and]: [{ name: data.provider }, { user_id: user.id }],   
                     },
                     defaults: {
-                        status: true,
                         name: data.provider,
                         user_id: user.id
                     },
@@ -78,7 +77,6 @@ module.exports = {
                 }
                 if (!createProvider) {
                     const userUpdate = await Provider.update({
-                        status: true,
                         updated_at: new Date()
                     },{
                         where: { 
@@ -140,7 +138,6 @@ module.exports = {
                         [Op.and]: [{ name: data.provider }, { user_id: user.id }],   
                     },
                     defaults: {
-                        status: true,
                         name: data.provider,
                         user_id: user.id
                     },
@@ -151,7 +148,6 @@ module.exports = {
                 }
                 if (!createProvider) {
                     const userUpdate = await Provider.update({
-                        status: true,
                         updated_at: new Date()
                     },{
                         where: { 
