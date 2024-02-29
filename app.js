@@ -7,7 +7,7 @@ const session = require('express-session');
 const flash = require('connect-flash');
 const passport = require("passport");
 const cors = require("cors");
-const whitelist = ["http://localhost:8888"];
+const whitelist = ["http://localhost:8888", "https://social-login-api-fontend.vercel.app"];
 require("dotenv").config();
 
 const apiRouter = require("./routes/api");

@@ -1,7 +1,6 @@
 const { User, Provider, sequelize } = require("../../../models/index");
 const CustomError = require("../../../utils/customError");
 const { errorResponse, successResponse } = require("../../../utils/response");
-const bcrypt = require("bcrypt");
 const { createAccessToken, createRefreshToken } = require("../../../utils/jwt");
 const passport = require("passport");
 const { Op } = require("sequelize");
