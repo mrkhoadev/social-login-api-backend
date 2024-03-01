@@ -78,14 +78,6 @@ module.exports = {
                 throw new CustomError("User Not Found", 401);
             }
             await sequelize.transaction(async (t) => {
-                // Xóa tất cả các bản ghi liên kết trong bảng Provider của người dùng
-                await Provider.destroy({
-                    where: {
-                        user_id: userId
-                    },
-                    transaction: t
-                });
-    
                 // Xóa người dùng
                 const user = await User.destroy({
                     where: {
@@ -114,14 +106,6 @@ module.exports = {
                 throw new CustomError("User Not Found", 401);
             }
             await sequelize.transaction(async (t) => {
-                // Xóa tất cả các bản ghi liên kết trong bảng Provider của người dùng
-                await Provider.destroy({
-                    where: {
-                        user_id: userIds
-                    },
-                    transaction: t
-                });
-    
                 // Xóa người dùng
                 const user = await User.destroy({
                     where: {
